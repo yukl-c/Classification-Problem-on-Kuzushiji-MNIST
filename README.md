@@ -52,19 +52,20 @@ Evaluation
   batch size: 32
   algorithm: softmax
   Result(algorithm, loss functin, learning rate, batch size):
-  * (CNN, MME, lr:0.1, batch size: 256): loss: 0.021; test acc: 0.878
-  * (CNN, CE, lr:0.001, batch size: 256): loss: 1.724; test acc: 0.448
-  * (CNN, MME, lr:0.001, batch size: 256): loss: 0.389; test acc: 0.439
-  * (CNN, CE, lr:0.1, batch size: 32): loss: 0.024; test acc: 0.933
-  * (CNN, MME, lr:0.1, batch size: 32): loss: 0.012; test acc: 0.899
-  * (CNN, CE, lr:0.001, batch size: 32): loss: 0.834; test acc: 0.621
-  * (CNN, MME, lr:0.001, batch size: 32): loss: 0.151; test acc: 0.581
-  * (softmax, CE, lr:0.1, batch size: 256): loss: 0.566; test acc: 0.704
-  * (softmax, CE, lr:0.001, batch size: 256): loss: 0.566; test acc: 0.704
-  * (softmax, CE, lr:0.1, batch size: 32): loss: 0.590; test acc: 0.696
-  * (softmax, CE, lr:0.001, batch size: 32): loss: 0.777; test acc: 0.639
-test acc >0.9: baseline, (CNN, CE, lr:0.1, batch size: 32). These 2 models perform high accuracy. 
-While loss: (CNN, CE, lr:0.1, batch size: 32) > baseline. 
+  1. (CNN, MME, lr:0.1, batch size: 256): loss: 0.021; test acc: 0.878
+  2. (CNN, CE, lr:0.001, batch size: 256): loss: 1.724; test acc: 0.448
+  3. (CNN, MME, lr:0.001, batch size: 256): loss: 0.389; test acc: 0.439
+  4. (CNN, CE, lr:0.1, batch size: 32): loss: 0.024; test acc: 0.933
+  5. (CNN, MME, lr:0.1, batch size: 32): loss: 0.012; test acc: 0.899
+  6. (CNN, CE, lr:0.001, batch size: 32): loss: 0.834; test acc: 0.621
+  7. (CNN, MME, lr:0.001, batch size: 32): loss: 0.151; test acc: 0.581
+  8. (softmax, CE, lr:0.1, batch size: 256): loss: 0.566; test acc: 0.704
+  9. (softmax, CE, lr:0.001, batch size: 256): loss: 0.566; test acc: 0.704
+  10. (softmax, CE, lr:0.1, batch size: 32): loss: 0.590; test acc: 0.696
+  11. (softmax, CE, lr:0.001, batch size: 32): loss: 0.777; test acc: 0.639
+    
+test acc >0.9: baseline, 5. (CNN, CE, lr:0.1, batch size: 32). These 2 models perform high accuracy. 
+While loss: 5. (CNN, CE, lr:0.1, batch size: 32) > baseline. 
 Thus, (CNN, CE, lr:0.1, batch size: 32) is the most suitable model.
 
 Limitations:
