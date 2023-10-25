@@ -1,10 +1,10 @@
 # Classification-Problem-on-Kuzushiji-MNIST
 Classification Problem on Kuzushiji-MNIST with PyTorch
 
-Objective
+# Objective
 To address an image classification system to classify the words in Kuzushiji-MNIST (KMNIST) dataset with convolution neural network as base. Then to compare with algorithms, loss functions, learning rates, batch sizes.
 
-Background
+# Background
 - Kuzushiji: A kind of Japanese cursive writing with long history, gradually declined. Only professionals received Kuzushiji education can read. With not this kind of experts, it is much difficult to read these huge amounts of Japanese cultural work.
 - CNN: 
  * A type of deep learning model specifically designed for processing structured grid-like data, such as images and videos. Its neuron-like elements can respond to surrounding units within a portion of the coverage area.
@@ -14,13 +14,13 @@ Background
    - higher accuracy by sharing features parameter and reduce dimension
    - performs better than multilayer preception to understand spatial between pixels of images better for image complication better
 
-KMNIST Dataset: 
+# KMNIST Dataset: 
 - a basic dataset similar to MNIST
 - focus on cursive Kuzushiji
 - 70000 images 
 - 10 classes: ‘o’, ‘ki’, ‘su’, ‘tsu’, ‘na’, ‘ha’, ‘ma’, ‘ya’, ‘re’, ‘wo’
 
-Modelling
+# Modelling
 - 1st convolution layer:
  input: 1 channel; output: 6 layers; kernel size: 5*5; padding: 2 pixels; activation function: ReLU
 - 1st pooling layer: 
@@ -31,7 +31,7 @@ input: 6 channel; output: 16 layers; kernel size: 5*5; padding: 2 pixels; activa
 - flattern layer: form 1-D tensor from matrix as input after convolution and pooling to make the judgement stable
 - Output: dimension matches the number of classes
 
-Training
+# Training
 - train a model with a GPU
 - generate a graph and animation of changes of training and testing accuracy, training loss per epoch
 - With no forwards or backwards gradient calculation through stochastic gradient descent, timer stop.
@@ -43,7 +43,7 @@ Training
  * batch size: 256
  * no. of epoch: 10
 
-Evaluation 
+# Evaluation 
 - Metrics: loss & test accuracy(acc)
 - Baseline(CNN, CE, lr:0.1, batch size: 256): loss: 0.094; test acc: 0.913
 - Comparing citerias:
@@ -68,13 +68,13 @@ test acc >0.9: baseline, 5. (CNN, CE, lr:0.1, batch size: 32). These 2 models pe
 While loss: 5. (CNN, CE, lr:0.1, batch size: 32) > baseline. 
 Thus, (CNN, CE, lr:0.1, batch size: 32) is the most suitable model.
 
-Limitations:
+# Limitations:
 * mismatching of words with similar strockes of words that reduce result accruacy
 e.g. ha’(は) and ‘su’(す); ‘tsu’(つ) and ‘ya’(や)
 - mismatching of words due to the different standard of images. It leads to higher chance mismatching as other words and reduce accruacy
 * some words: write in different style of writing, poor image quality
 
-Improvemnt
+# Improvemnt
 - enlarge dataset size
 - choose the data with clear image
 
